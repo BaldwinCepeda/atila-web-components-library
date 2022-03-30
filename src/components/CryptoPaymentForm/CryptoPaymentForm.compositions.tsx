@@ -9,11 +9,11 @@ const { Option } = Select;
 
 const paymentAmountOptions = [
     0.10,
-    1,
-    5,
-    10,
-    25,
-    100,
+    // 1,
+    // 5,
+    // 10,
+    // 25,
+    // 100,
 ]
 
 const currencyOptions = [
@@ -24,7 +24,13 @@ const currencyOptions = [
     {
         name: CHAIN_IDS.BINANCE.NAME,
         value: CHAIN_IDS.BINANCE.CURRENCY_CODE,
+    },
+    {
+        name:CHAIN_IDS.POLYGON.NAME,
+        value: CHAIN_IDS.POLYGON.CURRENCY_CODE
     }
+    
+
 ]
 
 const networkOptions = [

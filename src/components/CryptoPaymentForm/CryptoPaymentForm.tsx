@@ -33,6 +33,17 @@ export const CHAIN_IDS =  {
             NAME: "ropsten",
             ID: 3
         }
+    },
+    POLYGON: {
+        NAME: "Polygon",
+        CURRENCY_CODE: "Matic",
+        MAIN_NET: {
+            ID: 137
+        },
+        TEST_NET: {
+            NAME: "mumbai-testnet",
+            ID: 80001,
+        }
     }
 }
 
