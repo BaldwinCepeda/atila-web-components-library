@@ -49,9 +49,12 @@ export const CHAIN_IDS =  {
 
 export const MAXIMUM_DECIMAL_PLACES = 8;
 
+
+//PRICE
 export const CRYPTO_IN_USD: any = {
     ETH: 3363.92,
     BNB: 499.98,
+    Matic: 1.50,
 }
 
 export interface TransactionResponsePayment extends ethers.providers.TransactionResponse {

@@ -11,14 +11,14 @@ function App() {
   }
   return (
     <div className="App container py-5">
-      <h1>KLEVEL HEY josh is baldwin lol</h1>
+      <h1>KLEVEL</h1>
     
     <hr/>
     <ConfigurableCryptoPaymentForm />
     <hr />
     <CryptoPaymentForm amount={0.01} 
       isEditableAmount={true} 
-      isEditableDestinationAddress={true} 
+      isEditableDestinationAddress={false} 
       onSuccess={onPaymentComplete} />
     </div>
   );

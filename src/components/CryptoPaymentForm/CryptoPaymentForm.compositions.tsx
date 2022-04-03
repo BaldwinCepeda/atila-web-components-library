@@ -4,16 +4,16 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'antd/dist/antd.css';
 import { Radio, Select } from 'antd';
 
+
+
 const { Option } = Select;
 
 
 const paymentAmountOptions = [
-    0.10,
-    // 1,
-    // 5,
-    // 10,
-    // 25,
-    // 100,
+    50 , //price per qt 
+    100, //2
+    150, //3
+    200, //4
 ]
 
 const currencyOptions = [
@@ -21,10 +21,10 @@ const currencyOptions = [
         name: CHAIN_IDS.ETHEREUM.NAME,
         value: CHAIN_IDS.ETHEREUM.CURRENCY_CODE,
     },
-    {
-        name: CHAIN_IDS.BINANCE.NAME,
-        value: CHAIN_IDS.BINANCE.CURRENCY_CODE,
-    },
+    // {
+    //     name: CHAIN_IDS.BINANCE.NAME,
+    //     value: CHAIN_IDS.BINANCE.CURRENCY_CODE,
+    // },
     {
         name:CHAIN_IDS.POLYGON.NAME,
         value: CHAIN_IDS.POLYGON.CURRENCY_CODE
@@ -34,9 +34,9 @@ const currencyOptions = [
 ]
 
 const networkOptions = [
-    {
-        value: "testnet",
-    },
+    // {
+    //     value: "testnet",
+    // },
     {
         value: "mainnet",
     }
@@ -59,7 +59,7 @@ export const ConfigurableCryptoPaymentForm = () => {
     const selectAmount = (
       <>
       <Select value={paymentAmount} onChange={handleAmountChange} style={{width: "250px"}} className="mb-3">
-          <Option value={0} disabled={true}>{"Select Amount"}</Option>
+          <Option value={0} disabled={true}>{"Mint Now"}</Option>
           {paymentAmountOptions.map(paymentAmountOption => (
               <Option key={paymentAmountOption} value={paymentAmountOption}>{paymentAmountOption.toLocaleString('en-ca', {style : 'currency', currency: "CAD" })}{' '}
                ({currency} {(paymentAmountOption/CRYPTO_IN_USD[currency]).toFixed(MAXIMUM_DECIMAL_PLACES)})
